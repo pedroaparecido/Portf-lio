@@ -1,7 +1,6 @@
 import styled from "styled-components"
 
 const StyledDiv = styled.div`
-    background-color: #EFEFEF;
     padding: 30px;
     display: flex;
     flex-direction: row;
