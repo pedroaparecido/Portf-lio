@@ -5,6 +5,7 @@ const PrincipalButton = styled.button`
     background-color: #fffffff0;
     width: 200px;
     margin-top: 10px;
+    margin-bottom: 10px;
     border: none;
 `
 

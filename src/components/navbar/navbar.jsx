@@ -1,10 +1,15 @@
 import styled from "styled-components"
 
+import Link from "next/link"
+
 const StyledDiv = styled.div`
+    position: fixed;
     padding: 30px;
+    width: 100%;
     display: flex;
     flex-direction: row;
     justify-content: space-between;
+    background-color: white;
 `
 
 const DivE = styled.div`
@@ -24,28 +29,36 @@ const H2 = styled.h2`
     color: grey;
 `
 
+const ButtonH2 = styled.a`
+    font-size: 18px;
+    color: grey;
+    background-color: white;
+    border: none;
+    text-decoration: none;
+    cursor: pointer;
+`
+
 const DivD = styled.div`
     display: flex;
     flex-direction: row;
     align-items: center;
     justify-content: right;
-    gap: 50px;
+    gap: 30px;
+
 `
 
 export default function Navbar() {
     return(
         <StyledDiv>
             <DivE>
-                <H1>NAVBAR</H1>
-                <H2>MEN</H2>
-                <H2>WOMAN</H2>
-                <H2> COLLECTION</H2>
-                <H2>LOOKBOOK</H2>
-                <H2>SALE</H2>
+                <Link href="/" style={{"textDecoration": "none", "color": "black"}}><H1>PORTFÓLIO</H1></Link>
+                <ButtonH2 href="#home">HOME</ButtonH2>
+                <ButtonH2 href="#sobre">SOBRE</ButtonH2>
+                <ButtonH2 href="#projects"> PROJETOS</ButtonH2>
             </DivE>
             <DivD>
-                <H2>OUR STORY</H2>
-                <H2>CONTACT</H2>
+                <Link href="/history" style={{"textDecoration": "none"}}><H2>NOSSA HISTÓRIA</H2></Link>
+                <Link href="/contato" style={{"textDecoration": "none"}}><H2>CONTATO</H2></Link>
             </DivD>
         </StyledDiv>
     )

@@ -1,7 +1,7 @@
 import styled from "styled-components"
 
 const Tittle = styled.h1`
-    color: white;
+    color: ${props => props.color};
     font-size: 70px;
     font-weight: bold;
     text-align: left;
@@ -9,8 +9,8 @@ const Tittle = styled.h1`
     padding-bottom: 40px;
 `
 
-export default function H1({ children }) {
+export default function H1({ children, color }) {
     return(
-        <Tittle>{children}</Tittle>
+        <Tittle color={color}>{children}</Tittle>
     )
 }
